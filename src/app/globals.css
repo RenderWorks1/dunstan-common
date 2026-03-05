@@ -1,26 +1,83 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* Circular Std for hero tagline - self-hosted for reliable loading */
+@font-face {
+  font-family: "CircularStd";
+  src: url("/fonts/CircularStd-Book.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "CircularStd";
+  src: url("/fonts/CircularStd-BookItalic.woff2") format("woff2");
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: "CircularStd";
+  src: url("/fonts/CircularStd-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "CircularStd";
+  src: url("/fonts/CircularStd-Bold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-green-DEFAULT: #26764F;
+  --color-green-dark: #1D5C3E;
+  --color-green-light: #2E8A5E;
+  --color-gold-DEFAULT: #FFD67A;
+  --color-gold-dark: #E5B84E;
+  --color-gold-light: #FFDFB0;
+  --color-cream: #F5F0E8;
+  --color-stone: #E8E0D4;
+  --color-charcoal: #2C2C2C;
+  --color-slate: #6B6B6B;
+  --color-offwhite: #FAFAF8;
+
+  --font-serif: "Cormorant Garamond", Georgia, serif;
+  --font-sans: "Montserrat", system-ui, sans-serif;
+  --font-hero: "General Sans", system-ui, sans-serif;
+  --font-hero-tagline: "CircularStd", system-ui, sans-serif;
+  --font-body: var(--font-sans);
+  --color-accent: var(--color-green-DEFAULT);
+  --color-body-text: var(--color-slate);
+  --color-dark-text: var(--color-charcoal);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.section-who-we-are {
+  background: radial-gradient(
+    ellipse 100% 80% at 50% 50%,
+    #fefefe 0%,
+    #fafaf9 50%,
+    #f5f5f3 100%
+  );
+}
+
+.hero-tagline,
+.hero-title {
+  font-family: "CircularStd", system-ui, sans-serif !important;
+}
+
+.overline-accent {
+  font-family: var(--font-body);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-accent);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-offwhite);
+  color: var(--color-charcoal);
+  font-family: var(--font-sans);
+}
+
+html {
+  scroll-behavior: smooth;
 }
