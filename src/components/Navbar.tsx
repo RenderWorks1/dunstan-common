@@ -3,9 +3,10 @@
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
-const sectionLinks = [
+const navLinks = [
+  { hash: "hero", label: "Home" },
   { hash: "intro", label: "Intro" },
   { hash: "features", label: "Features" },
   { hash: "location", label: "Location" },
@@ -14,36 +15,61 @@ const sectionLinks = [
 
 export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState<string>("hero");
   const pathname = usePathname();
   const baseHref = pathname === "/" ? "" : "/";
 
+  useEffect(() => {
+    if (pathname !== "/") return;
+
+    const sections = navLinks.map((link) => document.getElementById(link.hash));
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActiveSection(entry.target.id);
+          }
+        });
+      },
+      { rootMargin: "-20% 0px -70% 0px", threshold: 0 }
+    );
+
+    sections.forEach((el) => el && observer.observe(el));
+    return () => observer.disconnect();
+  }, [pathname]);
+
   return (
     <nav className="fixed top-5 left-0 right-0 z-50 flex justify-center px-4">
-        <div className="flex w-fit items-center gap-0 rounded-xl bg-green-dark/70 pl-4 pr-2 py-0.5 shadow-2xl backdrop-blur-xl">
-        <Link href="/" className="flex-shrink-0">
+        <div className="flex w-fit items-center gap-0 rounded-xl bg-green-dark/70 px-4 py-2 shadow-2xl backdrop-blur-xl">
+        <Link href="/" className="flex-shrink-0 p-2.5">
           <Image
-            src="/logos/logo-color-transparent.png"
+            src="/logos/favicon-color.png"
             alt="Dunstan Common"
-            width={200}
-            height={60}
-            className="h-12 w-auto"
+            width={24}
+            height={24}
+            className="h-6 w-auto"
             priority
           />
         </Link>
 
-        <div className="hidden lg:flex items-center gap-1">
-          {sectionLinks.map((link) => (
-            <Link
-              key={link.hash}
-              href={`${baseHref}#${link.hash}`}
-              className="rounded-lg px-4 py-1.5 text-[13px] font-medium tracking-wide text-white transition-colors duration-200 hover:bg-white/10"
-              onClick={() => setMobileOpen(false)}
-            >
-              {link.label}
-            </Link>
-          ))}
+        <div className="hidden lg:flex items-center gap-1 pl-4">
+          {navLinks.map((link) => {
+            const isActive = pathname === "/" && activeSection === link.hash;
+            return (
+              <Link
+                key={link.hash}
+                href={pathname === "/" ? `#${link.hash}` : `/#${link.hash}`}
+                className={`rounded-lg px-4 py-1.5 text-[13px] font-medium tracking-wide transition-colors duration-200 ${
+                  isActive ? "bg-white/20 text-white" : "text-white hover:bg-white/10"
+                }`}
+                onClick={() => setMobileOpen(false)}
+              >
+                {link.label}
+              </Link>
+            );
+          })}
         </div>
-        <div className="hidden lg:flex items-center pl-5">
+        <div className="hidden lg:flex items-center pl-4">
           <Link
             href="/register"
             className="inline-flex items-center justify-center rounded-lg bg-white px-4 py-2 text-[13px] font-semibold tracking-wide text-green-dark transition-all duration-200 hover:bg-white/90"
@@ -54,7 +80,7 @@ export default function Navbar() {
 
         <button
           onClick={() => setMobileOpen(!mobileOpen)}
-          className="ml-auto lg:hidden p-2 text-white"
+          className="ml-auto lg:hidden p-2.5 text-white"
           aria-label="Toggle menu"
         >
           <svg
@@ -85,16 +111,21 @@ export default function Navbar() {
       {mobileOpen && (
         <div className="absolute top-full left-4 right-4 mt-2 rounded-xl bg-green-dark/95 px-4 py-4 shadow-2xl backdrop-blur-md lg:hidden">
           <div className="space-y-1">
-            {sectionLinks.map((link) => (
-              <Link
-                key={link.hash}
-                href={`${baseHref}#${link.hash}`}
-                onClick={() => setMobileOpen(false)}
-                className="block rounded-lg px-4 py-2.5 text-[13px] font-medium tracking-wide text-white transition-colors hover:bg-white/10"
-              >
-                {link.label}
-              </Link>
-            ))}
+            {navLinks.map((link) => {
+              const isActive = pathname === "/" && activeSection === link.hash;
+              return (
+                <Link
+                  key={link.hash}
+                  href={pathname === "/" ? `#${link.hash}` : `/#${link.hash}`}
+                  onClick={() => setMobileOpen(false)}
+                  className={`block rounded-lg px-4 py-2.5 text-[13px] font-medium tracking-wide transition-colors ${
+                    isActive ? "bg-white/20 text-white" : "text-white hover:bg-white/10"
+                  }`}
+                >
+                  {link.label}
+                </Link>
+              );
+            })}
             <Link
               href="/register"
               onClick={() => setMobileOpen(false)}

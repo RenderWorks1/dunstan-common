@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background video */}
       <video
         autoPlay
@@ -11,7 +11,7 @@ export default function Hero() {
         playsInline
         className="absolute inset-0 w-full h-full object-cover"
       >
-        <source src="/logos/herovid2.mp4" type="video/mp4" />
+        <source src="/logos/herobg3.mp4" type="video/mp4" />
       </video>
 
       {/* Dark overlay for text readability */}
@@ -28,7 +28,7 @@ export default function Hero() {
 
         <Link
           href="/register"
-          className="mt-20 inline-flex items-center justify-center rounded-full bg-neutral-800 px-8 py-4 text-base font-semibold text-white transition-colors hover:bg-neutral-700"
+          className="mt-20 inline-flex items-center justify-center rounded-xl bg-green-dark/70 px-8 py-4 text-base font-semibold text-white shadow-2xl backdrop-blur-xl transition-colors hover:bg-green-dark/80"
         >
           Register Your Interest
         </Link>
