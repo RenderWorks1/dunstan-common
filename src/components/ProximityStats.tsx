@@ -33,13 +33,13 @@ const stats = [
 
 export default function ProximityStats() {
   return (
-    <section className="bg-offwhite py-16 md:py-24">
+    <section className="bg-amazon-100 py-16 md:py-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <p className="font-sans text-sm font-semibold uppercase tracking-widest text-slate mb-3">
             Proximity
           </p>
-          <h2 className="font-serif text-3xl md:text-4xl font-normal text-charcoal">
+          <h2 className="font-hero-tagline text-3xl md:text-4xl font-normal text-charcoal">
             Five Minutes to Everything
           </h2>
         </div>
@@ -48,7 +48,7 @@ export default function ProximityStats() {
           {stats.map((stat) => (
             <div
               key={stat.label}
-              className="bg-white rounded-lg border border-stone p-6"
+              className="bg-amazon-50 rounded-lg border border-amazon-200 p-6"
             >
               <div className="flex items-center gap-3 mb-3">
                 <span className="inline-flex items-center justify-center rounded-full bg-green-DEFAULT px-3 py-1 text-xs font-bold text-white">

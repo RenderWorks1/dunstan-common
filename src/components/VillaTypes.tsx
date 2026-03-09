@@ -45,13 +45,13 @@ const villas = [
 
 export default function VillaTypes() {
   return (
-    <section className="bg-offwhite py-16 md:py-24">
+    <section className="bg-amazon-50 py-16 md:py-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <p className="font-sans text-sm font-semibold uppercase tracking-widest text-slate mb-3">
             Villa Types
           </p>
-          <h2 className="font-serif text-3xl md:text-4xl font-normal text-charcoal">
+          <h2 className="font-hero-tagline text-3xl md:text-4xl font-normal text-charcoal">
             Six Home Designs
           </h2>
           <p className="mt-4 text-base text-slate font-sans max-w-2xl mx-auto">
@@ -64,13 +64,13 @@ export default function VillaTypes() {
           {villas.map((villa) => (
             <div
               key={villa.type}
-              className="bg-white rounded-lg border border-stone p-6 hover:border-green-DEFAULT/30 transition-colors"
+              className="bg-amazon-50 rounded-lg border border-amazon-200 p-6 hover:border-amazon-400 transition-colors"
             >
               <div className="flex items-center justify-between mb-4">
                 <span className="font-serif text-xl font-normal text-charcoal">
                   {villa.type}
                 </span>
-                <span className="inline-flex items-center rounded-full bg-green-DEFAULT/10 px-3 py-1 text-xs font-semibold text-green-DEFAULT">
+                <span className="inline-flex items-center rounded-full bg-amazon-200 px-3 py-1 text-xs font-semibold text-amazon-700">
                   {villa.beds} Bed
                 </span>
               </div>

@@ -7,16 +7,24 @@ import MasterplanPreview from "@/components/MasterplanPreview";
 import HomesSummary from "@/components/HomesSummary";
 import FAQAccordion from "@/components/FAQAccordion";
 import Footer from "@/components/Footer";
-import StickyMobileCTA from "@/components/StickyMobileCTA";
-
+import Image from "next/image";
 export default function Home() {
   return (
     <>
       <Navbar />
-      <main>
+      <main className="landing-page">
         <Hero />
         <Introduction />
         <FeatureTiles />
+        <section id="landscape" className="relative w-full h-[85vh] -mt-12">
+          <Image
+            src="/centralotago2.png"
+            alt="Central Otago landscape"
+            fill
+            className="object-cover"
+            sizes="100vw"
+          />
+        </section>
         <LocationSnapshot />
         <MasterplanPreview />
         <HomesSummary />
@@ -26,7 +34,6 @@ export default function Home() {
         />
       </main>
       <Footer />
-      <StickyMobileCTA />
     </>
   );
 }

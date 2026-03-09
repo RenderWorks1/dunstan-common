@@ -23,39 +23,32 @@ const features = [
 
 export default function FeatureTiles() {
   return (
-    <section id="features" className="bg-green-DEFAULT/15 py-20 md:py-32">
+    <section id="features" className="relative z-10 bg-amazon-100 pt-20 pb-32 md:pt-32 md:pb-48 rounded-b-[3rem]">
       <div className="w-full px-8 sm:px-10 lg:px-16">
         <div className="mb-32">
           <AnimateOnScroll delay={0.08}>
             <p className="overline-accent mb-5">Key Features</p>
           </AnimateOnScroll>
           <AnimateOnScroll delay={0.16}>
-            <h2 className="font-hero font-normal leading-[1.15] text-dark-text text-2xl sm:text-3xl md:text-4xl lg:text-[2.75rem]">
+            <h2 className="font-hero-tagline font-normal leading-[1.15] text-dark-text text-2xl sm:text-3xl md:text-4xl lg:text-[2.75rem]">
               Why Dunstan Common
             </h2>
           </AnimateOnScroll>
         </div>
-        <div className="mx-auto grid w-full max-w-[2000px] grid-cols-1 md:grid-cols-3 gap-12 md:gap-16">
+        <div className="mx-auto grid w-full max-w-[2000px] grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10 md:gap-12 xl:gap-16">
           {features.map((feature, index) => (
-            <div
-              key={feature.title}
-              className="rounded-xl overflow-hidden bg-offwhite grid grid-cols-1 md:grid-cols-2 md:min-h-[480px]"
-            >
-              <div className="flex flex-col justify-start p-8 md:p-10 order-2 md:order-1">
-                <AnimateOnScroll delay={0.08 + index * 0.1}>
-                  <h3 className="font-hero text-2xl md:text-3xl lg:text-4xl font-normal text-dark-text tracking-tight mb-10">
+            <AnimateOnScroll key={feature.title} delay={0.08 + index * 0.08} slideOnly>
+              <div className="rounded-xl overflow-hidden bg-amazon-50 grid grid-cols-1 xl:grid-cols-2 xl:min-h-[480px]">
+                <div className="flex flex-col justify-start p-8 md:p-10 order-2 xl:order-1">
+                  <h3 className="font-hero text-xl md:text-2xl lg:text-3xl font-normal text-dark-text tracking-tight mb-8 md:mb-10">
                     {feature.title}
                   </h3>
-                </AnimateOnScroll>
-                <AnimateOnScroll delay={0.16 + index * 0.1}>
                   <p className="font-hero text-base md:text-lg text-body-text leading-relaxed">
                     {feature.description}
                   </p>
-                </AnimateOnScroll>
-              </div>
-              <div className="p-6 md:p-8 order-1 md:order-2 min-h-[320px] md:min-h-0">
-                <AnimateOnScroll delay={index * 0.08} slideOnly>
-                  <div className="relative w-full h-full min-h-[320px] md:min-h-[400px] md:aspect-[4/5] rounded-lg overflow-hidden">
+                </div>
+                <div className="p-6 md:p-8 order-1 xl:order-2 min-h-[320px] xl:min-h-0">
+                  <div className="relative w-full h-full min-h-[320px] md:min-h-[360px] xl:min-h-[400px] xl:aspect-[4/5] rounded-lg overflow-hidden">
                     <Image
                       src={feature.image}
                       alt={feature.title}
@@ -64,9 +57,9 @@ export default function FeatureTiles() {
                       sizes="(max-width: 768px) 100vw, 28vw"
                     />
                   </div>
-                </AnimateOnScroll>
+                </div>
               </div>
-            </div>
+            </AnimateOnScroll>
           ))}
         </div>
       </div>

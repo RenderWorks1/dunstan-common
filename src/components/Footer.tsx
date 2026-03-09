@@ -14,7 +14,7 @@ const footerLinks = [
 
 export default function Footer() {
   return (
-    <section className="py-16 md:py-20 lg:py-24">
+    <section className="bg-white py-16 md:py-20 lg:py-24">
       <div className="mx-auto w-[95%] max-w-[1800px]">
         <footer className="rounded-2xl bg-green-dark px-8 py-12 md:px-12 md:py-16 lg:px-16 lg:py-20 shadow-[0_4px_24px_rgba(0,0,0,0.06)] border border-white/10">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12 lg:gap-16">

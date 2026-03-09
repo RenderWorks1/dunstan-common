@@ -5,8 +5,6 @@ import ReserveLand from "@/components/ReserveLand";
 import StorageHub from "@/components/StorageHub";
 import Governance from "@/components/Governance";
 import Footer from "@/components/Footer";
-import StickyMobileCTA from "@/components/StickyMobileCTA";
-
 export const metadata: Metadata = {
   title: "The Common — Dunstan Common",
   description:
@@ -27,7 +25,6 @@ export default function TheCommonPage() {
         <Governance />
       </main>
       <Footer />
-      <StickyMobileCTA />
     </>
   );
 }

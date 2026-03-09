@@ -33,13 +33,13 @@ const facilities = [
 
 export default function StorageHub() {
   return (
-    <section className="bg-cream py-16 md:py-24">
+    <section className="bg-amazon-100 py-16 md:py-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <p className="font-sans text-sm font-semibold uppercase tracking-widest text-slate mb-3">
             Facilities
           </p>
-          <h2 className="font-serif text-3xl md:text-4xl font-normal text-charcoal">
+          <h2 className="font-hero-tagline text-3xl md:text-4xl font-normal text-charcoal">
             Secure Storage & Community Hub
           </h2>
           <p className="mt-4 text-base text-slate font-sans max-w-2xl mx-auto">
@@ -52,7 +52,7 @@ export default function StorageHub() {
           {facilities.map((facility) => (
             <div
               key={facility.title}
-              className="bg-offwhite rounded-lg border border-stone p-6"
+              className="bg-amazon-50 rounded-lg border border-amazon-200 p-6"
             >
               <h3 className="font-sans text-base font-semibold text-charcoal">
                 {facility.title}

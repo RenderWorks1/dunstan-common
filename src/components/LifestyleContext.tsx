@@ -1,13 +1,13 @@
 export default function LifestyleContext() {
   return (
-    <section className="bg-offwhite py-16 md:py-24">
+    <section className="bg-white py-16 md:py-24">
       <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
             <p className="font-sans text-sm font-semibold uppercase tracking-widest text-slate mb-3">
               Lifestyle
             </p>
-            <h2 className="font-serif text-3xl md:text-4xl font-normal text-charcoal">
+            <h2 className="font-hero-tagline text-3xl md:text-4xl font-normal text-charcoal">
               300+ Days of Sunshine
             </h2>
             <p className="mt-4 text-base text-slate leading-relaxed font-sans">
@@ -24,23 +24,23 @@ export default function LifestyleContext() {
           </div>
 
           <div className="grid grid-cols-2 gap-4">
-            <div className="bg-cream rounded-lg p-6 border border-stone text-center">
+            <div className="bg-amazon-100 rounded-lg p-6 border border-amazon-200 text-center">
               <p className="font-serif text-3xl text-green-DEFAULT">300+</p>
               <p className="text-xs text-slate mt-1 font-sans">
                 Days of Sunshine
               </p>
             </div>
-            <div className="bg-cream rounded-lg p-6 border border-stone text-center">
+            <div className="bg-amazon-100 rounded-lg p-6 border border-amazon-200 text-center">
               <p className="font-serif text-3xl text-green-DEFAULT">Flat</p>
               <p className="text-xs text-slate mt-1 font-sans">Terrain</p>
             </div>
-            <div className="bg-cream rounded-lg p-6 border border-stone text-center">
+            <div className="bg-amazon-100 rounded-lg p-6 border border-amazon-200 text-center">
               <p className="font-serif text-3xl text-green-DEFAULT">Golf</p>
               <p className="text-xs text-slate mt-1 font-sans">
                 Course Opposite
               </p>
             </div>
-            <div className="bg-cream rounded-lg p-6 border border-stone text-center">
+            <div className="bg-amazon-100 rounded-lg p-6 border border-amazon-200 text-center">
               <p className="font-serif text-3xl text-green-DEFAULT">Rail</p>
               <p className="text-xs text-slate mt-1 font-sans">
                 Trail Frontage

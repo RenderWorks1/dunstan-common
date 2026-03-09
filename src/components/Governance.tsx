@@ -23,13 +23,13 @@ const principles = [
 
 export default function Governance() {
   return (
-    <section className="bg-offwhite py-16 md:py-24">
+    <section className="bg-white py-16 md:py-24">
       <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <p className="font-sans text-sm font-semibold uppercase tracking-widest text-slate mb-3">
             Governance
           </p>
-          <h2 className="font-serif text-3xl md:text-4xl font-normal text-charcoal">
+          <h2 className="font-hero-tagline text-3xl md:text-4xl font-normal text-charcoal">
             An Incorporated Society — Not a Body Corporate
           </h2>
           <p className="mt-4 text-base text-slate font-sans max-w-2xl mx-auto">

@@ -13,7 +13,7 @@ const proximityItems = [
 
 export default function LocationSnapshot() {
   return (
-    <section id="location" className="section-who-we-are flex min-h-screen items-center overflow-hidden py-20 md:py-28 lg:py-32">
+    <section id="location" className="bg-white flex min-h-screen items-center overflow-hidden py-20 md:py-28 lg:py-32">
       <div className="mx-auto w-full max-w-[1600px] px-5 md:px-10 lg:px-16">
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-16 lg:items-center">
           {/* Text column */}
@@ -22,7 +22,7 @@ export default function LocationSnapshot() {
               <p className="overline-accent mb-5">Location</p>
             </AnimateOnScroll>
             <AnimateOnScroll delay={0.16}>
-              <h2 className="font-hero font-normal leading-[1.15] text-dark-text text-2xl sm:text-3xl md:text-4xl mb-12 md:mb-16 lg:text-[2.75rem]">
+              <h2 className="font-hero-tagline font-normal leading-[1.15] text-dark-text text-2xl sm:text-3xl md:text-4xl mb-12 md:mb-16 lg:text-[2.75rem]">
                 Central Otago Living
               </h2>
             </AnimateOnScroll>
@@ -38,9 +38,9 @@ export default function LocationSnapshot() {
               <ul className="mt-8 space-y-4">
                 {proximityItems.map((item) => (
                   <li key={item.label} className="flex items-center gap-3">
-                    <span className="flex-shrink-0 h-8 w-8 rounded-full bg-green-DEFAULT/10 flex items-center justify-center">
+                    <span className="flex-shrink-0 h-8 w-8 rounded-full bg-salomie-100 flex items-center justify-center">
                       <svg
-                        className="h-4 w-4 text-green-DEFAULT"
+                        className="h-4 w-4 text-salomie-300"
                         fill="none"
                         stroke="currentColor"
                         viewBox="0 0 24 24"
@@ -96,7 +96,11 @@ export default function LocationSnapshot() {
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5576.897898768!2d169.36!3d-45.265!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa82b13c24ac7d09f%3A0x1d4a0d67aab27b1e!2sDunstan%20Rd%2C%20Alexandra%209320%2C%20New%20Zealand!5e0!3m2!1sen!2snz!4v1709000000000"
                 width="100%"
                 height="680"
-                style={{ border: 0, display: "block" }}
+                style={{
+                  border: 0,
+                  display: "block",
+                  filter: "grayscale(30%) saturate(75%) hue-rotate(-12deg)",
+                }}
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"

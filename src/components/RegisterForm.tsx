@@ -15,7 +15,7 @@ export default function RegisterForm() {
 
   if (submitted) {
     return (
-      <section className="bg-cream py-16 md:py-24">
+      <section className="bg-amazon-100 py-16 md:py-24">
         <div className="mx-auto max-w-xl px-4 sm:px-6 lg:px-8 text-center">
           <div className="bg-offwhite rounded-lg border border-stone p-12">
             <div className="flex justify-center mb-4">
@@ -48,7 +48,7 @@ export default function RegisterForm() {
   }
 
   return (
-    <section className="bg-cream py-16 md:py-24">
+    <section className="bg-amazon-100 py-16 md:py-24">
       <div className="mx-auto max-w-xl px-4 sm:px-6 lg:px-8">
         <form onSubmit={handleSubmit} className="space-y-6">
           {/* Full Name */}

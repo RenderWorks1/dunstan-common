@@ -5,8 +5,6 @@ import ProximityStats from "@/components/ProximityStats";
 import LocationMap from "@/components/LocationMap";
 import LifestyleContext from "@/components/LifestyleContext";
 import Footer from "@/components/Footer";
-import StickyMobileCTA from "@/components/StickyMobileCTA";
-
 export const metadata: Metadata = {
   title: "Location — Dunstan Common",
   description:
@@ -27,7 +25,6 @@ export default function LocationPage() {
         <LifestyleContext />
       </main>
       <Footer />
-      <StickyMobileCTA />
     </>
   );
 }

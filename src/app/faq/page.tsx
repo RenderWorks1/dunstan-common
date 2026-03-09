@@ -3,8 +3,6 @@ import Navbar from "@/components/Navbar";
 import PageHero from "@/components/PageHero";
 import FAQAccordion from "@/components/FAQAccordion";
 import Footer from "@/components/Footer";
-import StickyMobileCTA from "@/components/StickyMobileCTA";
-
 export const metadata: Metadata = {
   title: "FAQ — Dunstan Common",
   description:
@@ -23,7 +21,6 @@ export default function FAQPage() {
         <FAQAccordion />
       </main>
       <Footer />
-      <StickyMobileCTA />
     </>
   );
 }

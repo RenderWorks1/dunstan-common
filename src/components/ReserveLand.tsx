@@ -1,13 +1,13 @@
 export default function ReserveLand() {
   return (
-    <section className="bg-offwhite py-16 md:py-24">
+    <section className="bg-white py-16 md:py-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
             <p className="font-sans text-sm font-semibold uppercase tracking-widest text-slate mb-3">
               Shared Reserve
             </p>
-            <h2 className="font-serif text-3xl md:text-4xl font-normal text-charcoal">
+            <h2 className="font-hero-tagline text-3xl md:text-4xl font-normal text-charcoal">
               2.1 Hectares of Resident-Owned Reserve
             </h2>
             <p className="mt-4 text-base text-slate leading-relaxed font-sans">

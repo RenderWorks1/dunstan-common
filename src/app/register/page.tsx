@@ -4,8 +4,6 @@ import PageHero from "@/components/PageHero";
 import RegisterBenefits from "@/components/RegisterBenefits";
 import RegisterForm from "@/components/RegisterForm";
 import Footer from "@/components/Footer";
-import StickyMobileCTA from "@/components/StickyMobileCTA";
-
 export const metadata: Metadata = {
   title: "Register Your Interest — Dunstan Common",
   description:
@@ -25,7 +23,6 @@ export default function RegisterPage() {
         <RegisterForm />
       </main>
       <Footer />
-      <StickyMobileCTA />
     </>
   );
 }

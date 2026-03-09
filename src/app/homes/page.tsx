@@ -5,8 +5,6 @@ import VillaTypes from "@/components/VillaTypes";
 import DesignFeatures from "@/components/DesignFeatures";
 import Masterplan from "@/components/Masterplan";
 import Footer from "@/components/Footer";
-import StickyMobileCTA from "@/components/StickyMobileCTA";
-
 export const metadata: Metadata = {
   title: "The Homes — Dunstan Common",
   description:
@@ -27,7 +25,6 @@ export default function HomesPage() {
         <Masterplan />
       </main>
       <Footer />
-      <StickyMobileCTA />
     </>
   );
 }

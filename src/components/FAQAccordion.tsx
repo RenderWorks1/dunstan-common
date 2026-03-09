@@ -60,7 +60,7 @@ export default function FAQAccordion({ title, subtitle }: FAQAccordionProps) {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
-    <section id="faq" className="section-who-we-are overflow-hidden py-20 md:py-28 lg:py-32">
+    <section id="faq" className="bg-white overflow-hidden py-20 md:py-28 lg:py-32">
       <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
         {(title || subtitle) && (
           <div className="mb-12 text-center">
@@ -69,7 +69,7 @@ export default function FAQAccordion({ title, subtitle }: FAQAccordionProps) {
             </AnimateOnScroll>
             {title && (
               <AnimateOnScroll delay={0.16}>
-                <h2 className="font-hero font-normal leading-[1.15] text-dark-text text-2xl sm:text-3xl md:text-4xl lg:text-[2.75rem]">
+                <h2 className="font-hero-tagline font-normal leading-[1.15] text-dark-text text-2xl sm:text-3xl md:text-4xl lg:text-[2.75rem]">
                   {title}
                 </h2>
               </AnimateOnScroll>

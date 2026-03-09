@@ -1,11 +1,17 @@
 import type { Metadata } from "next";
-import { Cormorant_Garamond, Montserrat } from "next/font/google";
+import { Cormorant_Garamond, Epilogue, Montserrat } from "next/font/google";
 import "./globals.css";
 
 const cormorant = Cormorant_Garamond({
   subsets: ["latin"],
   weight: ["300", "400", "500", "600"],
   variable: "--font-serif",
+});
+
+const epilogue = Epilogue({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-hero",
 });
 
 const montserrat = Montserrat({
@@ -35,7 +41,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${cormorant.variable} ${montserrat.variable}`}>
+    <html lang="en" className={`${cormorant.variable} ${epilogue.variable} ${montserrat.variable}`}>
       <head>
         <link
           href="https://api.fontshare.com/v2/css?f[]=general-sans@400,500,600,700&display=swap"

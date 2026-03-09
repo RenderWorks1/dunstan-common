@@ -33,13 +33,13 @@ const features = [
 
 export default function DesignFeatures() {
   return (
-    <section className="bg-cream py-16 md:py-24">
+    <section className="bg-white py-16 md:py-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <p className="font-sans text-sm font-semibold uppercase tracking-widest text-slate mb-3">
             Design
           </p>
-          <h2 className="font-serif text-3xl md:text-4xl font-normal text-charcoal">
+          <h2 className="font-hero-tagline text-3xl md:text-4xl font-normal text-charcoal">
             Built for Comfort
           </h2>
         </div>

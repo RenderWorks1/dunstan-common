@@ -1,9 +1,9 @@
 export default function LocationMap() {
   return (
-    <section className="bg-cream flex min-h-screen flex-col justify-center py-16 md:py-24">
+    <section className="bg-amazon-50 flex min-h-screen flex-col justify-center py-16 md:py-24">
       <div className="mx-auto w-full max-w-7xl flex-1 flex flex-col justify-center px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-10">
-          <h2 className="font-serif text-3xl md:text-4xl font-normal text-charcoal">
+          <h2 className="font-hero-tagline text-3xl md:text-4xl font-normal text-charcoal">
             Find Us
           </h2>
           <p className="mt-4 text-base text-slate font-sans max-w-2xl mx-auto">

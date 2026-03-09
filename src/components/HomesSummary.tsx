@@ -1,6 +1,5 @@
 "use client";
 
-import Link from "next/link";
 import AnimateOnScroll from "./AnimateOnScroll";
 
 const features = [
@@ -16,7 +15,7 @@ const features = [
 
 export default function HomesSummary() {
   return (
-    <section id="homes" className="section-who-we-are overflow-hidden py-20 md:py-28 lg:py-32">
+    <section id="homes" className="bg-amazon-100 overflow-hidden pt-20 md:pt-28 lg:pt-32 pb-28 md:pb-36 lg:pb-40">
       <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
@@ -24,7 +23,7 @@ export default function HomesSummary() {
               <p className="overline-accent mb-5">The Homes</p>
             </AnimateOnScroll>
             <AnimateOnScroll delay={0.16}>
-              <h2 className="font-hero font-normal leading-[1.15] text-dark-text text-2xl sm:text-3xl md:text-4xl mb-12 md:mb-16 lg:text-[2.75rem]">
+              <h2 className="font-hero-tagline font-normal leading-[1.15] text-dark-text text-2xl sm:text-3xl md:text-4xl mb-12 md:mb-16 lg:text-[2.75rem]">
                 Designed for Long-Term Ease
               </h2>
             </AnimateOnScroll>
@@ -33,27 +32,6 @@ export default function HomesSummary() {
                 Six villa types designed for comfort, convenience, and long-term
                 living. From $995,000.
               </p>
-            </AnimateOnScroll>
-            <AnimateOnScroll delay={0.32}>
-              <Link
-                href="#homes"
-                className="mt-16 inline-flex items-center gap-2 rounded-full border border-charcoal bg-white px-6 py-3 text-sm font-medium text-charcoal transition-colors hover:bg-stone group"
-              >
-                Explore The Homes
-                <svg
-                  className="h-4 w-4 transition-transform group-hover:translate-x-1"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M17 8l4 4m0 0l-4 4m4-4H3"
-                  />
-                </svg>
-              </Link>
             </AnimateOnScroll>
           </div>
 

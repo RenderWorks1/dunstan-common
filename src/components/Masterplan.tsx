@@ -5,14 +5,14 @@ import AnimateOnScroll from "./AnimateOnScroll";
 
 export default function Masterplan() {
   return (
-    <section className="section-who-we-are overflow-hidden py-20 md:py-28 lg:py-32">
+    <section className="bg-amazon-50 overflow-hidden py-20 md:py-28 lg:py-32">
       <div className="mx-auto w-full max-w-[1600px] px-5 md:px-10 lg:px-16">
         <div className="text-center mb-12 md:mb-16">
           <AnimateOnScroll delay={0.08}>
             <p className="overline-accent mb-5">Masterplan</p>
           </AnimateOnScroll>
           <AnimateOnScroll delay={0.16}>
-            <h2 className="font-hero font-normal leading-[1.15] text-dark-text text-2xl sm:text-3xl md:text-4xl lg:text-[2.75rem]">
+            <h2 className="font-hero-tagline font-normal leading-[1.15] text-dark-text text-2xl sm:text-3xl md:text-4xl lg:text-[2.75rem]">
               The Full Picture
             </h2>
           </AnimateOnScroll>
@@ -27,7 +27,7 @@ export default function Masterplan() {
         <AnimateOnScroll delay={0} slideOnly>
           <div className="rounded-xl overflow-hidden border border-stone">
             <Image
-              src="/masterplan.png"
+              src="/siteplan2.jpg"
               alt="Dunstan Estate concept masterplan showing 54 lots, shared reserves, and community facilities"
               width={1600}
               height={1200}

@@ -27,21 +27,40 @@
 }
 
 @theme inline {
-  --color-green-DEFAULT: #26764F;
-  --color-green-dark: #1D5C3E;
-  --color-green-light: #2E8A5E;
+  /* Amazon-inspired palette (logo-based greens) – use for section/card backgrounds */
+  --color-amazon-50: #f1f8f3;
+  --color-amazon-100: #deede1;
+  --color-amazon-200: #bfdbc6;
+  --color-amazon-300: #94c1a2;
+  --color-amazon-400: #66a17a;
+  --color-amazon-500: #3e7553;
+  --color-amazon-600: #336849;
+  --color-amazon-700: #29533b;
+  --color-amazon-800: #224331;
+  --color-amazon-900: #1d3729;
+  --color-amazon-950: #0f1f16;
+
+  /* Salomie – golden part of logo */
+  --color-salomie-50: #fef9ec;
+  --color-salomie-100: #fcedc9;
+  --color-salomie-200: #f9d88b;
+  --color-salomie-300: #f6c053;
+
+  --color-green-DEFAULT: var(--color-amazon-500);
+  --color-green-dark: var(--color-amazon-700);
+  --color-green-light: var(--color-amazon-400);
   --color-gold-DEFAULT: #FFD67A;
   --color-gold-dark: #E5B84E;
   --color-gold-light: #FFDFB0;
-  --color-cream: #F5F0E8;
-  --color-stone: #E8E0D4;
-  --color-charcoal: #2C2C2C;
+  --color-cream: var(--color-amazon-100);
+  --color-stone: var(--color-amazon-200);
+  --color-charcoal: var(--color-amazon-950);
   --color-slate: #6B6B6B;
-  --color-offwhite: #FAFAF8;
+  --color-offwhite: var(--color-amazon-50);
 
   --font-serif: "Cormorant Garamond", Georgia, serif;
   --font-sans: "Montserrat", system-ui, sans-serif;
-  --font-hero: "General Sans", system-ui, sans-serif;
+  --font-hero: "Epilogue", system-ui, sans-serif;
   --font-hero-tagline: "CircularStd", system-ui, sans-serif;
   --font-body: var(--font-sans);
   --color-accent: var(--color-green-DEFAULT);
@@ -49,18 +68,14 @@
   --color-dark-text: var(--color-charcoal);
 }
 
-.section-who-we-are {
-  background: radial-gradient(
-    ellipse 100% 80% at 50% 50%,
-    #fefefe 0%,
-    #fafaf9 50%,
-    #f5f5f3 100%
-  );
+.hero-title {
+  font-family: var(--font-hero-tagline), system-ui, sans-serif !important;
+  font-weight: 400 !important;
 }
 
-.hero-tagline,
-.hero-title {
-  font-family: "CircularStd", system-ui, sans-serif !important;
+.hero-subtitle,
+.hero-tagline {
+  font-family: var(--font-hero-tagline), system-ui, sans-serif !important;
 }
 
 .overline-accent {
@@ -80,4 +95,19 @@ body {
 
 html {
   scroll-behavior: smooth;
+}
+
+.landing-page > section {
+  position: relative;
+}
+
+.landing-page > section:not(:first-child):not(#intro):not(#landscape) {
+  margin-top: -3.5rem;
+  border-top-left-radius: 3.5rem;
+  border-top-right-radius: 3.5rem;
+  overflow: hidden;
+}
+
+.landing-page > section#landscape {
+  margin-top: -3.5rem;
 }
