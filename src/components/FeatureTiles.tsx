@@ -35,20 +35,20 @@ export default function FeatureTiles() {
             </h2>
           </AnimateOnScroll>
         </div>
-        <div className="mx-auto grid w-full max-w-[2000px] grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 gap-6 sm:gap-8 md:gap-10 lg:gap-14 2xl:gap-20">
+        <div className="mx-auto grid w-full max-w-[2000px] grid-cols-1 2xl:grid-cols-3 gap-6 sm:gap-8 lg:gap-12 2xl:gap-20">
           {features.map((feature, index) => (
             <AnimateOnScroll key={feature.title} delay={0.08 + index * 0.08} slideOnly>
-              <div className="rounded-xl overflow-hidden bg-amazon-50 grid grid-cols-1 xl:grid-cols-2 xl:min-h-[480px]">
-                <div className="flex flex-col justify-start p-5 sm:p-6 md:p-7 lg:p-8 xl:p-8 2xl:p-10 order-2 xl:order-1">
+              <div className="mx-auto w-full max-w-3xl 2xl:max-w-none rounded-xl overflow-hidden bg-amazon-50 grid grid-cols-1 md:grid-cols-2 md:min-h-[340px] 2xl:min-h-[480px]">
+                <div className="flex flex-col justify-start p-5 sm:p-6 md:p-6 lg:p-7 2xl:p-10 order-2 md:order-1">
                   <h3 className="font-hero text-lg sm:text-xl md:text-xl lg:text-2xl 2xl:text-2xl font-normal text-dark-text tracking-tight mb-3 sm:mb-4 md:mb-5 lg:mb-6 2xl:mb-8">
                     {feature.title}
                   </h3>
-                  <p className="font-hero text-sm 2xl:text-base text-body-text leading-relaxed">
+                  <p className="font-hero text-base text-body-text leading-relaxed">
                     {feature.description}
                   </p>
                 </div>
-                <div className="p-4 sm:p-5 md:p-6 lg:p-8 order-1 xl:order-2 min-h-[280px] sm:min-h-[320px] xl:min-h-0">
-                  <div className="relative w-full h-full min-h-[260px] sm:min-h-[300px] md:min-h-[340px] xl:min-h-[400px] xl:aspect-[4/5] rounded-lg overflow-hidden">
+                <div className="p-4 sm:p-5 md:p-5 lg:p-6 2xl:p-8 order-1 md:order-2 min-h-[220px] sm:min-h-[260px] md:min-h-0">
+                  <div className="relative w-full h-full min-h-[220px] sm:min-h-[260px] md:min-h-0 md:aspect-[4/5] 2xl:min-h-[400px] rounded-lg overflow-hidden">
                     <Image
                       src={feature.image}
                       alt={feature.title}
