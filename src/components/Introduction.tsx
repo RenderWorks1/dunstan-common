@@ -26,7 +26,7 @@ export default function Introduction() {
           <AnimateOnScroll delay={0} slideOnly>
             <div
               ref={imageRef}
-              className="relative h-[80vh] w-full overflow-hidden rounded-xl"
+              className="relative h-[45vh] md:h-[60vh] lg:h-[80vh] w-full overflow-hidden rounded-xl"
               onMouseMove={handleMouseMove}
               onMouseLeave={handleMouseLeave}
             >
@@ -50,7 +50,7 @@ export default function Introduction() {
 
         {/* Right column - text, half screen */}
         <div className="flex-1 lg:min-w-0 flex items-center">
-          <div className="w-full px-5 py-12 md:px-10 md:py-16 lg:px-12 lg:py-0 lg:max-w-3xl">
+          <div className="w-full px-8 py-12 md:px-10 md:py-16 lg:px-12 lg:py-0 lg:max-w-3xl">
             <AnimateOnScroll delay={0.08}>
               <p className="overline-accent mb-5">
                 Freehold homes for independent retirees aged 60+

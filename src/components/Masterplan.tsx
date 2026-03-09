@@ -25,14 +25,13 @@ export default function Masterplan() {
         </div>
 
         <AnimateOnScroll delay={0} slideOnly>
-          <div className="rounded-xl overflow-hidden border border-stone">
+          <div className="relative rounded-xl overflow-hidden border border-amazon-50 h-[80vh] w-full bg-amazon-50">
             <Image
               src="/siteplan2.jpg"
               alt="Dunstan Estate concept masterplan showing 54 lots, shared reserves, and community facilities"
-              width={1600}
-              height={1200}
-              className="w-full h-auto"
-              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 90vw, 1600px"
+              fill
+              className="object-contain"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 90vw, 1200px"
               priority={false}
             />
           </div>

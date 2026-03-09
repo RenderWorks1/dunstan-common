@@ -34,18 +34,18 @@ const benefits = [
 
 export default function RegisterBenefits() {
   return (
-    <section className="bg-amazon-50 py-16 md:py-20">
-      <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+    <section className="px-4 py-16 md:py-20 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-5xl">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {benefits.map((benefit) => (
             <div key={benefit.title} className="text-center">
-              <div className="flex justify-center text-green-DEFAULT mb-3">
+              <div className="flex justify-center text-neutral-500 mb-3">
                 {benefit.icon}
               </div>
-              <h3 className="font-sans text-base font-semibold text-charcoal">
+              <h3 className="font-sans text-base font-semibold text-neutral-900">
                 {benefit.title}
               </h3>
-              <p className="mt-2 text-sm text-slate leading-relaxed">
+              <p className="mt-2 text-sm text-neutral-600 leading-relaxed">
                 {benefit.description}
               </p>
             </div>

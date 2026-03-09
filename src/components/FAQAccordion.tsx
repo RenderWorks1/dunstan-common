@@ -61,7 +61,7 @@ export default function FAQAccordion({ title, subtitle }: FAQAccordionProps) {
 
   return (
     <section id="faq" className="bg-white overflow-hidden py-20 md:py-28 lg:py-32">
-      <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-3xl px-8 sm:px-6 lg:px-8">
         {(title || subtitle) && (
           <div className="mb-12 text-center">
             <AnimateOnScroll delay={0.08}>

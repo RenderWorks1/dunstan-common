@@ -45,9 +45,9 @@ const villas = [
 
 export default function VillaTypes() {
   return (
-    <section className="bg-amazon-50 py-16 md:py-24">
+    <section className="bg-amazon-50 py-20 md:py-32">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
+        <div className="text-center mb-16 md:mb-20">
           <p className="font-sans text-sm font-semibold uppercase tracking-widest text-slate mb-3">
             Villa Types
           </p>
@@ -60,7 +60,7 @@ export default function VillaTypes() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {villas.map((villa) => (
             <div
               key={villa.type}

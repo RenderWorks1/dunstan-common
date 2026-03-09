@@ -51,6 +51,7 @@
   --color-green-light: var(--color-amazon-400);
   --color-gold-DEFAULT: #FFD67A;
   --color-gold-dark: #E5B84E;
+  --color-gold-darker: #B8942E;
   --color-gold-light: #FFDFB0;
   --color-cream: var(--color-amazon-100);
   --color-stone: var(--color-amazon-200);
@@ -103,9 +104,16 @@ html {
 
 .landing-page > section:not(:first-child):not(#intro):not(#landscape) {
   margin-top: -3.5rem;
-  border-top-left-radius: 3.5rem;
-  border-top-right-radius: 3.5rem;
+  border-top-left-radius: 1.5rem;
+  border-top-right-radius: 1.5rem;
   overflow: hidden;
+}
+
+@media (min-width: 768px) {
+  .landing-page > section:not(:first-child):not(#intro):not(#landscape) {
+    border-top-left-radius: 3.5rem;
+    border-top-right-radius: 3.5rem;
+  }
 }
 
 .landing-page > section#landscape {

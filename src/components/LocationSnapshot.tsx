@@ -14,7 +14,7 @@ const proximityItems = [
 export default function LocationSnapshot() {
   return (
     <section id="location" className="bg-white flex min-h-screen items-center overflow-hidden py-20 md:py-28 lg:py-32">
-      <div className="mx-auto w-full max-w-[1600px] px-5 md:px-10 lg:px-16">
+      <div className="mx-auto w-full max-w-[1600px] px-8 md:px-10 lg:px-16">
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-16 lg:items-center">
           {/* Text column */}
           <div className="pl-0 pr-0 lg:pl-8 lg:pr-14">
@@ -38,9 +38,9 @@ export default function LocationSnapshot() {
               <ul className="mt-8 space-y-4">
                 {proximityItems.map((item) => (
                   <li key={item.label} className="flex items-center gap-3">
-                    <span className="flex-shrink-0 h-8 w-8 rounded-full bg-salomie-100 flex items-center justify-center">
+                    <span className="flex-shrink-0 flex items-center justify-center">
                       <svg
-                        className="h-4 w-4 text-salomie-300"
+                        className="h-5 w-5 text-salomie-300"
                         fill="none"
                         stroke="currentColor"
                         viewBox="0 0 24 24"
@@ -91,11 +91,12 @@ export default function LocationSnapshot() {
 
           {/* Map column */}
           <AnimateOnScroll delay={0} slideOnly>
-            <div className="rounded-xl overflow-hidden border border-stone">
+            <div className="rounded-xl overflow-hidden border border-stone h-[280px] md:h-[400px] lg:h-[680px] mb-8 md:mb-0">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5576.897898768!2d169.36!3d-45.265!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa82b13c24ac7d09f%3A0x1d4a0d67aab27b1e!2sDunstan%20Rd%2C%20Alexandra%209320%2C%20New%20Zealand!5e0!3m2!1sen!2snz!4v1709000000000"
                 width="100%"
-                height="680"
+                height="100%"
+                className="h-full w-full"
                 style={{
                   border: 0,
                   display: "block",

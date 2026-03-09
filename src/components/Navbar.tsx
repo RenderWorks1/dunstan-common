@@ -7,10 +7,9 @@ import { useState, useEffect } from "react";
 
 const navLinks = [
   { hash: "hero", label: "Home" },
-  { hash: "intro", label: "Intro" },
+  { path: "/plans", label: "Plans" },
   { hash: "features", label: "Features" },
   { hash: "location", label: "Location" },
-  { hash: "faq", label: "FAQ" },
 ];
 
 export default function Navbar() {
@@ -22,7 +21,9 @@ export default function Navbar() {
   useEffect(() => {
     if (pathname !== "/") return;
 
-    const sections = navLinks.map((link) => document.getElementById(link.hash));
+    const sections = navLinks
+      .filter((link) => link.hash)
+      .map((link) => document.getElementById(link.hash!));
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -52,13 +53,33 @@ export default function Navbar() {
           />
         </Link>
 
+        <div className="flex lg:hidden items-center gap-1 pl-2">
+          <Link
+            href={pathname === "/" ? "#hero" : "/"}
+            onClick={() => setMobileOpen(false)}
+            className="rounded-lg px-3 py-1.5 text-[13px] font-medium tracking-wide text-white transition-colors duration-200 hover:bg-white/10"
+          >
+            Home
+          </Link>
+          <Link
+            href="/plans"
+            onClick={() => setMobileOpen(false)}
+            className="rounded-lg px-3 py-1.5 text-[13px] font-medium tracking-wide text-white transition-colors duration-200 hover:bg-white/10"
+          >
+            Plans
+          </Link>
+        </div>
+
         <div className="hidden lg:flex items-center gap-1 pl-4">
           {navLinks.map((link) => {
-            const isActive = pathname === "/" && activeSection === link.hash;
+            const isActive = link.path
+              ? pathname === link.path
+              : pathname === "/" && activeSection === link.hash;
+            const href = link.path ?? (pathname === "/" ? `#${link.hash}` : `/#${link.hash}`);
             return (
               <Link
-                key={link.hash}
-                href={pathname === "/" ? `#${link.hash}` : `/#${link.hash}`}
+                key={link.path ?? link.hash}
+                href={href}
                 className={`rounded-lg px-4 py-1.5 text-[13px] font-medium tracking-wide transition-colors duration-200 ${
                   isActive ? "bg-white/20 text-white" : "text-white hover:bg-white/10"
                 }`}
@@ -112,11 +133,14 @@ export default function Navbar() {
         <div className="absolute top-full left-4 right-4 mt-2 rounded-xl bg-green-dark/95 px-4 py-4 shadow-2xl backdrop-blur-md lg:hidden">
           <div className="space-y-1">
             {navLinks.map((link) => {
-              const isActive = pathname === "/" && activeSection === link.hash;
+              const isActive = link.path
+                ? pathname === link.path
+                : pathname === "/" && activeSection === link.hash;
+              const href = link.path ?? (pathname === "/" ? `#${link.hash}` : `/#${link.hash}`);
               return (
                 <Link
-                  key={link.hash}
-                  href={pathname === "/" ? `#${link.hash}` : `/#${link.hash}`}
+                  key={link.path ?? link.hash}
+                  href={href}
                   onClick={() => setMobileOpen(false)}
                   className={`block rounded-lg px-4 py-2.5 text-[13px] font-medium tracking-wide transition-colors ${
                     isActive ? "bg-white/20 text-white" : "text-white hover:bg-white/10"

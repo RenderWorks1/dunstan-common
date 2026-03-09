@@ -15,11 +15,11 @@ export default function RegisterForm() {
 
   if (submitted) {
     return (
-      <section className="bg-amazon-100 py-16 md:py-24">
-        <div className="mx-auto max-w-xl px-4 sm:px-6 lg:px-8 text-center">
-          <div className="bg-offwhite rounded-lg border border-stone p-12">
+      <section className="px-4 py-16 md:py-24 sm:px-6 lg:px-8 lg:pb-28">
+        <div className="mx-auto max-w-xl text-center">
+          <div className="rounded-2xl bg-neutral-100 px-8 py-16 sm:px-12">
             <div className="flex justify-center mb-4">
-              <div className="h-16 w-16 rounded-full bg-green-DEFAULT flex items-center justify-center">
+              <div className="h-16 w-16 rounded-full bg-neutral-900 flex items-center justify-center">
                 <svg
                   className="h-8 w-8 text-white"
                   fill="none"
@@ -35,10 +35,10 @@ export default function RegisterForm() {
                 </svg>
               </div>
             </div>
-            <h3 className="font-serif text-2xl font-normal text-charcoal">
+            <h3 className="font-hero-tagline text-3xl tracking-tight text-neutral-900 sm:text-4xl">
               Thank You
             </h3>
-            <p className="mt-3 text-base text-slate font-sans">
+            <p className="mt-5 text-base leading-8 text-neutral-600">
               We&apos;ll be in touch with priority access details shortly.
             </p>
           </div>
@@ -48,14 +48,14 @@ export default function RegisterForm() {
   }
 
   return (
-    <section className="bg-amazon-100 py-16 md:py-24">
-      <div className="mx-auto max-w-xl px-4 sm:px-6 lg:px-8">
-        <form onSubmit={handleSubmit} className="space-y-6">
+    <section className="px-4 pb-24 sm:px-6 lg:px-8 lg:pb-28">
+      <div className="mx-auto max-w-xl">
+        <form onSubmit={handleSubmit} className="space-y-6 rounded-2xl border border-neutral-200 bg-white p-8 shadow-md sm:p-10">
           {/* Full Name */}
           <div>
             <label
               htmlFor="name"
-              className="block text-sm font-semibold text-charcoal mb-1.5"
+              className="block text-sm font-semibold text-neutral-900 mb-1.5"
             >
               Full Name <span className="text-red-500">*</span>
             </label>
@@ -64,7 +64,7 @@ export default function RegisterForm() {
               id="name"
               name="name"
               required
-              className="w-full rounded-md border border-stone bg-offwhite px-4 py-3 text-sm text-charcoal placeholder:text-slate/50 focus:border-green-DEFAULT focus:outline-none focus:ring-1 focus:ring-green-DEFAULT"
+              className="w-full rounded-lg border border-neutral-300 bg-white px-4 py-3 text-sm text-neutral-900 placeholder:text-neutral-400 focus:border-neutral-900 focus:outline-none focus:ring-1 focus:ring-neutral-900"
               placeholder="Your full name"
             />
           </div>
@@ -73,7 +73,7 @@ export default function RegisterForm() {
           <div>
             <label
               htmlFor="phone"
-              className="block text-sm font-semibold text-charcoal mb-1.5"
+              className="block text-sm font-semibold text-neutral-900 mb-1.5"
             >
               Phone <span className="text-red-500">*</span>
             </label>
@@ -82,7 +82,7 @@ export default function RegisterForm() {
               id="phone"
               name="phone"
               required
-              className="w-full rounded-md border border-stone bg-offwhite px-4 py-3 text-sm text-charcoal placeholder:text-slate/50 focus:border-green-DEFAULT focus:outline-none focus:ring-1 focus:ring-green-DEFAULT"
+              className="w-full rounded-lg border border-neutral-300 bg-white px-4 py-3 text-sm text-neutral-900 placeholder:text-neutral-400 focus:border-neutral-900 focus:outline-none focus:ring-1 focus:ring-neutral-900"
               placeholder="Your phone number"
             />
           </div>
@@ -91,7 +91,7 @@ export default function RegisterForm() {
           <div>
             <label
               htmlFor="email"
-              className="block text-sm font-semibold text-charcoal mb-1.5"
+              className="block text-sm font-semibold text-neutral-900 mb-1.5"
             >
               Email <span className="text-red-500">*</span>
             </label>
@@ -100,7 +100,7 @@ export default function RegisterForm() {
               id="email"
               name="email"
               required
-              className="w-full rounded-md border border-stone bg-offwhite px-4 py-3 text-sm text-charcoal placeholder:text-slate/50 focus:border-green-DEFAULT focus:outline-none focus:ring-1 focus:ring-green-DEFAULT"
+              className="w-full rounded-lg border border-neutral-300 bg-white px-4 py-3 text-sm text-neutral-900 placeholder:text-neutral-400 focus:border-neutral-900 focus:outline-none focus:ring-1 focus:ring-neutral-900"
               placeholder="your@email.com"
             />
           </div>
@@ -109,7 +109,7 @@ export default function RegisterForm() {
           <div>
             <label
               htmlFor="location"
-              className="block text-sm font-semibold text-charcoal mb-1.5"
+              className="block text-sm font-semibold text-neutral-900 mb-1.5"
             >
               Current Location
             </label>
@@ -117,24 +117,24 @@ export default function RegisterForm() {
               type="text"
               id="location"
               name="location"
-              className="w-full rounded-md border border-stone bg-offwhite px-4 py-3 text-sm text-charcoal placeholder:text-slate/50 focus:border-green-DEFAULT focus:outline-none focus:ring-1 focus:ring-green-DEFAULT"
+              className="w-full rounded-lg border border-neutral-300 bg-white px-4 py-3 text-sm text-neutral-900 placeholder:text-neutral-400 focus:border-neutral-900 focus:outline-none focus:ring-1 focus:ring-neutral-900"
               placeholder="e.g. Cromwell, Queenstown"
             />
           </div>
 
           {/* Local to Central Otago */}
           <div>
-            <p className="block text-sm font-semibold text-charcoal mb-2">
+            <p className="block text-sm font-semibold text-neutral-900 mb-2">
               Are you local to Central Otago?
             </p>
             <div className="flex gap-3">
               <button
                 type="button"
                 onClick={() => setIsLocal(true)}
-                className={`flex-1 rounded-md border px-4 py-3 text-sm font-medium transition-colors ${
+                className={`flex-1 rounded-full border px-4 py-3 text-sm font-medium transition-colors ${
                   isLocal === true
-                    ? "border-green-DEFAULT bg-green-DEFAULT text-white"
-                    : "border-stone bg-offwhite text-charcoal hover:border-green-DEFAULT/50"
+                    ? "border-neutral-900 bg-neutral-900 text-white"
+                    : "border-neutral-300 bg-white text-neutral-700 hover:border-neutral-400"
                 }`}
               >
                 Yes
@@ -142,10 +142,10 @@ export default function RegisterForm() {
               <button
                 type="button"
                 onClick={() => setIsLocal(false)}
-                className={`flex-1 rounded-md border px-4 py-3 text-sm font-medium transition-colors ${
+                className={`flex-1 rounded-full border px-4 py-3 text-sm font-medium transition-colors ${
                   isLocal === false
-                    ? "border-green-DEFAULT bg-green-DEFAULT text-white"
-                    : "border-stone bg-offwhite text-charcoal hover:border-green-DEFAULT/50"
+                    ? "border-neutral-900 bg-neutral-900 text-white"
+                    : "border-neutral-300 bg-white text-neutral-700 hover:border-neutral-400"
                 }`}
               >
                 No
@@ -155,7 +155,7 @@ export default function RegisterForm() {
 
           {/* Preferred Home Type */}
           <div>
-            <p className="block text-sm font-semibold text-charcoal mb-2">
+            <p className="block text-sm font-semibold text-neutral-900 mb-2">
               Preferred Home Type
             </p>
             <div className="flex gap-3">
@@ -164,10 +164,10 @@ export default function RegisterForm() {
                   key={option}
                   type="button"
                   onClick={() => setHomeType(option)}
-                  className={`flex-1 rounded-md border px-4 py-3 text-sm font-medium transition-colors ${
+                  className={`flex-1 rounded-full border px-4 py-3 text-sm font-medium transition-colors ${
                     homeType === option
-                      ? "border-green-DEFAULT bg-green-DEFAULT text-white"
-                      : "border-stone bg-offwhite text-charcoal hover:border-green-DEFAULT/50"
+                      ? "border-neutral-900 bg-neutral-900 text-white"
+                      : "border-neutral-300 bg-white text-neutral-700 hover:border-neutral-400"
                   }`}
                 >
                   {option}
@@ -178,12 +178,12 @@ export default function RegisterForm() {
 
           <button
             type="submit"
-            className="w-full rounded-md bg-green-DEFAULT px-6 py-4 text-base font-semibold text-white transition-colors hover:bg-green-dark"
+            className="w-full rounded-full bg-neutral-900 px-8 py-3 text-sm font-medium text-white transition hover:bg-neutral-800"
           >
             Register Your Interest
           </button>
 
-          <p className="text-xs text-slate text-center">
+          <p className="text-xs text-neutral-500 text-center">
             Your details will be used to provide you with priority access
             information about Dunstan Common.
           </p>

@@ -6,15 +6,18 @@ interface AnimateOnScrollProps {
   children: React.ReactNode;
   delay?: number;
   slideOnly?: boolean;
+  className?: string;
 }
 
 export default function AnimateOnScroll({
   children,
   delay = 0,
   slideOnly = false,
+  className,
 }: AnimateOnScrollProps) {
   return (
     <motion.div
+      className={className}
       initial={{
         opacity: slideOnly ? 1 : 0,
         y: 24,

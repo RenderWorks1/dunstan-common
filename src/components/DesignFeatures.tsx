@@ -33,9 +33,9 @@ const features = [
 
 export default function DesignFeatures() {
   return (
-    <section className="bg-white py-16 md:py-24">
+    <section className="bg-white py-20 md:py-32">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
+        <div className="text-center mb-16 md:mb-20">
           <p className="font-sans text-sm font-semibold uppercase tracking-widest text-slate mb-3">
             Design
           </p>
@@ -44,7 +44,7 @@ export default function DesignFeatures() {
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
           {features.map((feature) => (
             <div key={feature.title} className="flex gap-4">
               <div className="flex-shrink-0 mt-1">
