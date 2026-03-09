@@ -30,20 +30,20 @@ export default function FeatureTiles() {
             <p className="overline-accent mb-4 sm:mb-5 text-[0.7rem] sm:text-[0.8125rem]">Key Features</p>
           </AnimateOnScroll>
           <AnimateOnScroll delay={0.16}>
-            <h2 className="font-hero-tagline font-normal leading-[1.15] text-dark-text text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-[2.75rem]">
+            <h2 className="font-hero-tagline font-normal leading-[1.15] text-dark-text text-xl sm:text-2xl md:text-2xl lg:text-3xl xl:text-3xl 2xl:text-[2.75rem]">
               Why Dunstan Common
             </h2>
           </AnimateOnScroll>
         </div>
-        <div className="mx-auto grid w-full max-w-[2000px] grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 sm:gap-8 md:gap-12 xl:gap-16">
+        <div className="mx-auto grid w-full max-w-[2000px] grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 gap-6 sm:gap-8 md:gap-10 lg:gap-14 2xl:gap-20">
           {features.map((feature, index) => (
             <AnimateOnScroll key={feature.title} delay={0.08 + index * 0.08} slideOnly>
               <div className="rounded-xl overflow-hidden bg-amazon-50 grid grid-cols-1 xl:grid-cols-2 xl:min-h-[480px]">
-                <div className="flex flex-col justify-start p-5 sm:p-6 md:p-8 lg:p-10 order-2 xl:order-1">
-                  <h3 className="font-hero text-lg sm:text-xl md:text-2xl lg:text-3xl font-normal text-dark-text tracking-tight mb-4 sm:mb-6 md:mb-8 lg:mb-10">
+                <div className="flex flex-col justify-start p-5 sm:p-6 md:p-7 lg:p-8 xl:p-8 2xl:p-10 order-2 xl:order-1">
+                  <h3 className="font-hero text-lg sm:text-xl md:text-xl lg:text-2xl 2xl:text-2xl font-normal text-dark-text tracking-tight mb-3 sm:mb-4 md:mb-5 lg:mb-6 2xl:mb-8">
                     {feature.title}
                   </h3>
-                  <p className="font-hero text-sm sm:text-base md:text-lg text-body-text leading-relaxed">
+                  <p className="font-hero text-sm 2xl:text-base text-body-text leading-relaxed">
                     {feature.description}
                   </p>
                 </div>
