@@ -52,34 +52,25 @@ export default function Introduction() {
         <div className="flex-1 lg:min-w-0 flex items-center">
           <div className="w-full px-8 py-12 md:px-10 md:py-16 lg:px-12 lg:py-0 lg:max-w-3xl">
             <AnimateOnScroll delay={0.08}>
-              <p className="overline-accent mb-5">
-                Freehold homes for independent retirees aged 60+
-              </p>
-            </AnimateOnScroll>
-            <AnimateOnScroll delay={0.16}>
-              <h2 className="mb-5 font-hero-tagline font-normal leading-[1.15] text-dark-text text-2xl sm:text-3xl md:text-4xl lg:text-[2.75rem]">
+              <h2 className="mb-12 md:mb-16 font-hero-tagline font-normal leading-[1.15] text-dark-text text-2xl sm:text-3xl md:text-4xl lg:text-[2.75rem]">
                 Independent Retirement Living in Alexandra, Central Otago
               </h2>
             </AnimateOnScroll>
-            <AnimateOnScroll delay={0.2}>
-              <p className="mb-12 md:mb-16 text-xl sm:text-2xl font-medium text-dark-text">
-                From $995,000
-              </p>
-            </AnimateOnScroll>
-            <AnimateOnScroll delay={0.24}>
-              <div className="space-y-5 font-hero text-body-text text-sm leading-relaxed sm:text-base md:text-lg">
+            <AnimateOnScroll delay={0.12}>
+              <div className="space-y-5 font-hero text-body-text text-base md:text-lg leading-relaxed">
                 <p>
-                  Dunstan Common is a 46-home freehold neighbourhood on Dunstan
-                  Road, Alexandra — opposite the golf course, alongside the
-                  Central Otago Rail Trail. Every home comes with a freehold
-                  title and a share in over two hectares of landscaped reserve.
-                  This is not a retirement village. It&apos;s a neighbourhood
-                  built on practical independence.
+                  Dunstan Common is a 46-home freehold neighbourhood for
+                  independent retirees aged 60+, on Dunstan Road, Alexandra —
+                  opposite the golf course, alongside the Central Otago Rail
+                  Trail. Every home comes with a freehold title and a share in
+                  over two hectares of landscaped reserve. This is not a
+                  retirement village. It&apos;s a neighbourhood built on
+                  practical independence, with homes from $995,000.
                 </p>
               </div>
             </AnimateOnScroll>
             <AnimateOnScroll delay={0.32}>
-              <p className="mt-5 text-xs text-slate/70 font-sans">
+              <p className="mt-5 text-base text-slate/70 font-hero">
                 Subject to consent. Resource consent lodged and progressing
                 towards approval.
               </p>

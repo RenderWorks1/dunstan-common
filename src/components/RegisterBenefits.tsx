@@ -34,7 +34,7 @@ const benefits = [
 
 export default function RegisterBenefits() {
   return (
-    <section className="px-4 py-16 md:py-20 sm:px-6 lg:px-8">
+    <section className="px-4 pt-8 pb-16 md:pt-10 md:pb-20 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-5xl">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {benefits.map((benefit) => (

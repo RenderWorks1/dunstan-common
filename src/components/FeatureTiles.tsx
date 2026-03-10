@@ -25,13 +25,10 @@ export default function FeatureTiles() {
   return (
     <section id="features" className="relative z-10 bg-amazon-100 pt-20 pb-32 md:pt-32 md:pb-48 rounded-b-[3rem]">
       <div className="w-full px-8 sm:px-10 lg:px-16">
-        <div className="mb-16 sm:mb-24 md:mb-32">
+        <div className="mb-8 sm:mb-12 md:mb-16">
           <AnimateOnScroll delay={0.08}>
-            <p className="overline-accent mb-4 sm:mb-5 text-[0.7rem] sm:text-[0.8125rem]">Key Features</p>
-          </AnimateOnScroll>
-          <AnimateOnScroll delay={0.16}>
-            <h2 className="font-hero-tagline font-normal leading-[1.15] text-dark-text text-xl sm:text-2xl md:text-2xl lg:text-3xl xl:text-3xl 2xl:text-[2.75rem]">
-              Why Dunstan Common
+            <h2 className="font-hero-tagline font-normal leading-[1.15] text-dark-text text-2xl sm:text-3xl md:text-4xl lg:text-[2.75rem]">
+              Key Features
             </h2>
           </AnimateOnScroll>
         </div>

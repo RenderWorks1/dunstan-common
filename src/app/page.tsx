@@ -12,7 +12,7 @@ export default function Home() {
   return (
     <>
       <Navbar />
-      <main className="landing-page">
+      <main className="landing-page font-hero">
         <Hero />
         <Introduction />
         <FeatureTiles />

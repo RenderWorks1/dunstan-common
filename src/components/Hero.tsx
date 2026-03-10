@@ -26,10 +26,6 @@ export default function Hero() {
           Independent Retirement Living
         </p>
 
-        <p className="hero-tagline mt-6 text-sm sm:text-lg md:text-xl font-extralight italic text-white drop-shadow-[0_1px_10px_rgba(0,0,0,0.4)]">
-          Own your home. Share the common.
-        </p>
-
         <Link
           href="/register"
           className="mt-36 inline-flex items-center gap-2 rounded-2xl bg-white px-8 py-4 text-base font-semibold tracking-wide text-green-dark transition-colors hover:bg-white/90"

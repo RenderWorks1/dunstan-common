@@ -15,7 +15,7 @@ export default function RegisterPage() {
     <>
       <Navbar />
       <main className="bg-[#f8f6f1]">
-        <section className="px-4 pt-32 pb-18 sm:px-6 lg:px-8 lg:pt-40 lg:pb-24">
+        <section className="px-4 pt-32 pb-8 sm:px-6 lg:px-8 lg:pt-40 lg:pb-10">
           <div className="mx-auto max-w-4xl text-center">
             <h1 className="font-hero-tagline text-4xl tracking-tight text-neutral-900 sm:text-5xl lg:text-6xl">
               Register for Priority Access
@@ -31,7 +31,7 @@ export default function RegisterPage() {
         <RegisterBenefits />
         <RegisterForm />
       </main>
-      <Footer />
+      <Footer className="bg-[#f8f6f1]" />
     </>
   );
 }

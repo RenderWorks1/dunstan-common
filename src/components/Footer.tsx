@@ -12,9 +12,13 @@ const footerLinks = [
   { href: "/register", label: "Register Interest" },
 ];
 
-export default function Footer() {
+interface FooterProps {
+  className?: string;
+}
+
+export default function Footer({ className }: FooterProps) {
   return (
-    <section className="bg-white py-16 md:py-20 lg:py-24">
+    <section className={`py-16 md:py-20 lg:py-24 ${className ?? "bg-white"}`}>
       <div className="mx-auto w-[95%] max-w-[1800px]">
         <footer className="rounded-2xl bg-green-dark px-8 py-12 md:px-12 md:py-16 lg:px-16 lg:py-20 shadow-[0_4px_24px_rgba(0,0,0,0.06)] border border-white/10">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12 lg:gap-16">
@@ -36,7 +40,7 @@ export default function Footer() {
 
             {/* Quick links */}
             <div>
-              <h4 className="font-sans text-xs font-semibold uppercase tracking-widest text-gold-DEFAULT mb-4">
+              <h4 className="font-hero text-xs font-semibold uppercase tracking-widest text-gold-DEFAULT mb-4">
                 Quick links
               </h4>
               <ul className="space-y-3">
@@ -55,7 +59,7 @@ export default function Footer() {
 
             {/* Location / Get in touch */}
             <div>
-              <h4 className="font-sans text-xs font-semibold uppercase tracking-widest text-gold-DEFAULT mb-4">
+              <h4 className="font-hero text-xs font-semibold uppercase tracking-widest text-gold-DEFAULT mb-4">
                 Get in touch
               </h4>
               <p className="font-hero text-sm text-white/70 leading-relaxed">
@@ -67,17 +71,17 @@ export default function Footer() {
           </div>
 
           <div className="mt-12 pt-8 border-t border-white/10 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
-            <p className="font-sans text-xs text-white/50 uppercase tracking-wider">
+            <p className="font-hero text-xs text-white/50 uppercase tracking-wider">
               Freehold title · Subject to consent · Resource consent lodged
             </p>
             <div className="flex items-center gap-4">
-              <p className="font-sans text-xs text-white/50">
+              <p className="font-hero text-xs text-white/50">
                 &copy; {new Date().getFullYear()} Dunstan Common. All rights
                 reserved.
               </p>
               <Link
                 href="/privacy"
-                className="font-sans text-xs text-white/50 hover:text-white transition-colors"
+                className="font-hero text-xs text-white/50 hover:text-white transition-colors"
               >
                 Privacy
               </Link>
