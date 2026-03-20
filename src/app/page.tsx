@@ -4,7 +4,6 @@ import Introduction from "@/components/Introduction";
 import FeatureTiles from "@/components/FeatureTiles";
 import LocationSnapshot from "@/components/LocationSnapshot";
 import SitePlanSection from "@/components/SitePlanSection";
-import MasterplanPreview from "@/components/MasterplanPreview";
 import FAQAccordion from "@/components/FAQAccordion";
 import Footer from "@/components/Footer";
 import Image from "next/image";
@@ -27,7 +26,6 @@ export default function Home() {
           />
         </section>
         <LocationSnapshot />
-        <MasterplanPreview />
         <FAQAccordion
           title="Frequently Asked Questions"
           subtitle="Everything you need to know about Dunstan Common"
