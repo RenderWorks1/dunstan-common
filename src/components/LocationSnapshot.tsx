@@ -3,11 +3,141 @@
 import AnimateOnScroll from "./AnimateOnScroll";
 
 const proximityItems = [
-  { label: "Alexandra township", distance: "5 min" },
-  { label: "Clyde township", distance: "5 min" },
-  { label: "Dunstan Hospital", distance: "5 min" },
-  { label: "Rail Trail frontage", distance: "Direct" },
-  { label: "Golf course opposite", distance: "Across the road" },
+  {
+    label: "Alexandra township",
+    distance: "5 min",
+    icon: (
+      <svg
+        className="h-5 w-5 text-salomie-300"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+        strokeWidth={2}
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          d="M3 21h18"
+        />
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          d="M5 21V8l7-4 7 4v13"
+        />
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          d="M9 12h.01M15 12h.01M9 16h.01M15 16h.01"
+        />
+      </svg>
+    ),
+  },
+  {
+    label: "Clyde township",
+    distance: "5 min",
+    icon: (
+      <svg
+        className="h-5 w-5 text-salomie-300"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+        strokeWidth={2}
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          d="M4 21h16"
+        />
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          d="M6 21V10l6-4 6 4v11"
+        />
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          d="M10 21v-5h4v5"
+        />
+      </svg>
+    ),
+  },
+  {
+    label: "Dunstan Hospital",
+    distance: "5 min",
+    icon: (
+      <svg
+        className="h-5 w-5 text-salomie-300"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+        strokeWidth={2}
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          d="M9 5h6v4h4v6h-4v4H9v-4H5V9h4V5Z"
+        />
+      </svg>
+    ),
+  },
+  {
+    label: "Rail Trail frontage",
+    distance: "Direct",
+    icon: (
+      <svg
+        className="h-5 w-5 text-salomie-300"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+        strokeWidth={2}
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          d="M6 19 18 5"
+        />
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          d="M7.5 7.5h3v3M13.5 13.5h3v3"
+        />
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          d="M5 21h14"
+        />
+      </svg>
+    ),
+  },
+  {
+    label: "Golf course opposite",
+    distance: "Across the road",
+    icon: (
+      <svg
+        className="h-5 w-5 text-salomie-300"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+        strokeWidth={2}
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          d="M6 21V4"
+        />
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          d="m6 5 9 3-9 3V5Z"
+        />
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          d="M4 21h8"
+        />
+      </svg>
+    ),
+  },
 ];
 
 export default function LocationSnapshot() {
@@ -38,24 +168,7 @@ export default function LocationSnapshot() {
                 {proximityItems.map((item) => (
                   <li key={item.label} className="flex items-center gap-3">
                     <span className="flex-shrink-0 flex items-center justify-center">
-                      <svg
-                        className="h-5 w-5 text-salomie-300"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                        strokeWidth={2}
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
-                        />
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z"
-                        />
-                      </svg>
+                      {item.icon}
                     </span>
                     <span className="font-hero text-dark-text text-sm sm:text-base">
                       <strong className="font-semibold">{item.distance}</strong>{" "}
