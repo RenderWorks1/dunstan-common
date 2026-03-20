@@ -7,7 +7,7 @@ const footerLinks = [
   { href: "/#features", label: "Features" },
   { href: "/#location", label: "Location" },
   { href: "/#masterplan", label: "Masterplan" },
-  { href: "/#homes", label: "Homes" },
+  { href: "/homes", label: "Homes" },
   { href: "/#faq", label: "FAQ" },
   { href: "/register", label: "Register Interest" },
 ];

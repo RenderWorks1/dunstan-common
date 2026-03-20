@@ -1,8 +1,21 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Hero() {
   return (
     <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      {/* Logo - top left */}
+      <div className="absolute top-0 left-0 p-6 sm:p-8 z-20">
+        <Image
+          src="/logos/logo-color-transparent.png"
+          alt="Dunstan Common"
+          width={400}
+          height={267}
+          className="h-14 sm:h-24 md:h-28 lg:h-32 w-auto drop-shadow-[0_2px_12px_rgba(0,0,0,0.4)]"
+          priority
+        />
+      </div>
+
       {/* Background video */}
       <video
         autoPlay
@@ -11,7 +24,7 @@ export default function Hero() {
         playsInline
         className="absolute inset-0 w-full h-full object-cover"
       >
-        <source src="/newherobg.mp4" type="video/mp4" />
+        <source src="/herobg3-compressed.mp4" type="video/mp4" />
       </video>
 
       {/* Dark overlay for text readability */}

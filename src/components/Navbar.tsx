@@ -42,7 +42,7 @@ export default function Navbar() {
   return (
     <nav className="fixed top-5 left-0 right-0 z-50 flex justify-center px-4 font-hero">
         <div className="flex w-fit items-center gap-0 rounded-xl bg-green-dark/70 px-4 py-2 shadow-2xl backdrop-blur-xl">
-        <Link href="/" className="flex-shrink-0 p-2.5">
+        <Link href="/" className="hidden lg:flex flex-shrink-0 p-2.5">
           <Image
             src="/logos/favicon-color.png"
             alt="Dunstan Common"
@@ -53,18 +53,18 @@ export default function Navbar() {
           />
         </Link>
 
-        <div className="flex lg:hidden items-center gap-1 pl-2">
+        <div className="flex lg:hidden items-center gap-1">
           <Link
             href={pathname === "/" ? "#hero" : "/"}
             onClick={() => setMobileOpen(false)}
-            className="rounded-lg px-3 py-1.5 text-[13px] font-medium tracking-wide text-white transition-colors duration-200 hover:bg-white/10"
+            className="rounded-lg px-3 pt-2 pb-1.5 text-[13px] font-medium tracking-wide text-white transition-colors duration-200 hover:bg-white/10"
           >
             Home
           </Link>
           <Link
             href="/plans"
             onClick={() => setMobileOpen(false)}
-            className="rounded-lg px-3 py-1.5 text-[13px] font-medium tracking-wide text-white transition-colors duration-200 hover:bg-white/10"
+            className="rounded-lg px-3 pt-2 pb-1.5 text-[13px] font-medium tracking-wide text-white transition-colors duration-200 hover:bg-white/10"
           >
             Plans
           </Link>
@@ -80,7 +80,7 @@ export default function Navbar() {
               <Link
                 key={link.path ?? link.hash}
                 href={href}
-                className={`rounded-lg px-4 py-1.5 text-[13px] font-medium tracking-wide transition-colors duration-200 ${
+                className={`rounded-lg px-4 pt-2 pb-1.5 text-[13px] font-medium tracking-wide transition-colors duration-200 ${
                   isActive ? "bg-white/20 text-white" : "text-white hover:bg-white/10"
                 }`}
                 onClick={() => setMobileOpen(false)}
@@ -90,6 +90,16 @@ export default function Navbar() {
             );
           })}
         </div>
+
+        {pathname !== "/" && (
+          <Link
+            href="/register"
+            className="hidden lg:inline-flex rounded-lg px-4 pt-2 pb-1.5 text-[13px] font-medium tracking-wide text-green-dark bg-white hover:bg-white/90 transition-colors duration-200 ml-2"
+            onClick={() => setMobileOpen(false)}
+          >
+            Register Your Interest
+          </Link>
+        )}
 
         <button
           onClick={() => setMobileOpen(!mobileOpen)}
@@ -124,6 +134,15 @@ export default function Navbar() {
       {mobileOpen && (
         <div className="absolute top-full left-4 right-4 mt-2 rounded-xl bg-green-dark/95 px-4 py-4 shadow-2xl backdrop-blur-md lg:hidden">
           <div className="space-y-1">
+            {pathname !== "/" && (
+              <Link
+                href="/register"
+                onClick={() => setMobileOpen(false)}
+                className="block rounded-lg px-4 pt-3 pb-2.5 text-[13px] font-medium tracking-wide bg-white text-green-dark hover:bg-white/90 transition-colors mb-2"
+              >
+                Register Your Interest
+              </Link>
+            )}
             {navLinks.map((link) => {
               const isActive = link.path
                 ? pathname === link.path
@@ -134,7 +153,7 @@ export default function Navbar() {
                   key={link.path ?? link.hash}
                   href={href}
                   onClick={() => setMobileOpen(false)}
-                  className={`block rounded-lg px-4 py-2.5 text-[13px] font-medium tracking-wide transition-colors ${
+                  className={`block rounded-lg px-4 pt-3 pb-2.5 text-[13px] font-medium tracking-wide transition-colors ${
                     isActive ? "bg-white/20 text-white" : "text-white hover:bg-white/10"
                   }`}
                 >
