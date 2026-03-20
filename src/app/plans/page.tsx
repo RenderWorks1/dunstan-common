@@ -61,7 +61,7 @@ export default function PlansPage() {
           </div>
         </section>
       </main>
-      <Footer />
+      <Footer className="bg-[#f8f6f1]" />
     </>
   );
 }
